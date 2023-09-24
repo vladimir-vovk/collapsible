@@ -1,8 +1,8 @@
+import Ionicons from '@expo/vector-icons/Ionicons'
+
 import { ReactElement, useEffect } from 'react'
 import { Pressable, StyleSheet } from 'react-native'
 import Animated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated'
-
-import Ionicons from '@expo/vector-icons/Ionicons'
 
 const styles = StyleSheet.create({
   icon: {
@@ -21,7 +21,7 @@ export const Switch = ({ value, onChange }: Props): ReactElement => {
 
   useEffect(() => {
     rotate.value = withTiming(value ? 0 : -180)
-  }, [value])
+  }, [value, rotate])
 
   const aStyle = useAnimatedStyle(() => ({
     transform: [{ rotate: `${rotate.value}deg` }]

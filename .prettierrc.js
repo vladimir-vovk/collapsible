@@ -10,6 +10,7 @@ module.exports = {
   importOrderSortSpecifiers: true,
   importOrderCaseInsensitive: true,
   importOrder: [
+    '^@(.*)',
     '<THIRD_PARTY_MODULES>',
     // '^(.*)/components/(.*)$', // Add any folders you want to be separate
     '^src/(.*)$', // Add any folders you want to be separate
